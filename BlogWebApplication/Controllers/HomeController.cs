@@ -18,6 +18,21 @@ namespace BlogWebApplication.Controllers
             return View();
         }
 
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+
+        public IActionResult Destinos()
+        {
+            return View();
+        }
+
+        public IActionResult Contatos()
+        {
+            return View();
+        }
+
         //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         //public IActionResult Error()
         //{
