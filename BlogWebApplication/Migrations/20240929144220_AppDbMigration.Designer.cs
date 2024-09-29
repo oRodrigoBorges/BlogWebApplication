@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogWebApplication.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240929141927_AppDbMigration")]
+    [Migration("20240929144220_AppDbMigration")]
     partial class AppDbMigration
     {
         /// <inheritdoc />

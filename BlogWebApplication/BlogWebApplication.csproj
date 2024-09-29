@@ -2,10 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>disable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable> <!--Quando "enable", será exigido que toda elemento tipo referencia seja definico como Nullable-->
+    <ImplicitUsings>enable</ImplicitUsings> <!--Quando "enable", os "using" definidos serão aplicados globalmente a todos os arquivos-->
   </PropertyGroup>
-
+	
+	<!--Abaixo serão exibidos todos os Nugets instalados no projeto-->
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
       <PrivateAssets>all</PrivateAssets>
