@@ -1,0 +1,398 @@
+body {
+    text-align: justify;
+    margin-left: 4em;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Formatações do Cabeçalho principal */
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.headerContainer {
+    margin: 2em 5em 2em 5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconeMenu {
+    height: 30px;
+    width: 30px;
+}
+
+/* Formatações da parte superior dos artigos de introdução */
+
+.sectionContainerTitulo {
+    margin: 2em 5em 2em 5em;
+    display: flex;
+}
+
+.sectionContainerTitulo h1 {
+    font-size: 60px;
+    margin-top: 1em;
+    position: absolute;
+    width: 10em;
+}
+
+.sectionContainerTitulo p {
+    margin: 20em 5em 0em 0em;
+}
+
+.divH1sectionContainerTitulo {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.sectionContainerArtigo {
+    margin: 2em 5em 2em 6em;
+    display: flex;
+}
+
+.sectionContainerArtigoDivDireita {
+    display: grid;
+}
+
+.sectionContainerArtigoDivDireita h1, p, a {
+    margin: 1em 0em 0em 2em;
+}
+
+/* Configurações das imagens da página inicial */
+
+.imagem01 {
+    width: 680px;
+    height: 730px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
+.imagem02 {
+    width: 350px;
+    height: 560px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
+.imagem03 {
+    width: 180px;
+    height: 180px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
+.imagem04 {
+    width: 700px;
+    height: 415px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
+.imagem05 {
+    width: 500px;
+    height: 580px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
+.imagem06 {
+    width: 210px;
+    height: 180px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
+.imagem07 {
+    width: 300px;
+    height: 380px;
+    border: solid 2px gray;
+    border-radius: 2px;
+    margin: 1em;
+}
+
+.divImagens03 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sectionContainerArtigo02 {
+    margin: 2em 5em 2em 5em;
+    display: flex;
+    align-items: center;
+}
+
+.sectionContainerArtigo02 div {
+    margin: 0em 2em 0em 0em;
+}
+
+.sectionContainerArtigo02Locais {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2em;
+}
+
+.divContainerArtigo02Locais {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    margin: 1em 2em 2em 3em;
+
+}
+
+.sectionContainerArtigo03 {
+    margin: 2em 5em 2em 5em;
+    display: flex;
+    align-items: center;
+}
+
+.divContainerArtigo03Esquerdo {
+    display: flex;
+    width: 50%;
+    flex-direction: column
+}
+
+.divContainerArtigo03Direito {
+    display: flex;
+    width: 50%;
+}
+
+.sectionContainerArtigo03Rodape {
+    margin: 2em 5em 2em auto;
+    width: 50%;
+}
+
+.sectionContainerEntreEmContato {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 17em 17em;
+    grid-template-rows: 1em 2em;
+    grid-template-areas:
+      "h2EntreEmContato h2EntreEmContato"
+      "pEntreEmContato formEntreEmContato";
+}
+
+.h2EntreEmContato {
+    grid-area: h2EntreEmContato;
+    text-align: center;
+}
+
+.pEntreEmContato {
+    grid-area: pEntreEmContato;
+    margin-right: 1.5em;
+}
+
+.rodape {
+    color: white;
+    background-color: #292929;
+    margin: 1em 1em 0em 0em;
+    padding: .5em 1em 1em 1em;
+    text-align: center;
+}
+
+/* Configurações do scroll "Barra Lateral" */
+
+::-webkit-scrollbar {
+    width: 12px; /* Largura do scroll */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Cor do fundo do scroll */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #977aff; /* Cor do scroll */
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5900ff; /* Cor do scroll com mouse em cima */
+}
+
+@media (max-width: 768px) {
+    .headerContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconeMenu {
+        margin-top: 1em;
+    }
+
+    .sectionContainerTitulo {
+        flex-direction: column;
+        align-items: center;
+        margin: 1em;
+    }
+
+    .sectionContainerTitulo h1 {
+        font-size: 36px;
+        width: auto;
+        position: static;
+        margin-top: 0;
+    }
+
+    .sectionContainerTitulo p {
+        margin: 1em 0;
+        text-align: center;
+    }
+
+    .sectionContainerArtigo, 
+    .sectionContainerArtigo02, 
+    .sectionContainerArtigo03 {
+        flex-direction: column;
+        align-items: center;
+        margin: 1em;
+    }
+
+    .sectionContainerArtigo img,
+    .sectionContainerArtigo02 img,
+    .sectionContainerArtigo03 img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: none;
+    }
+
+    .sectionContainerArtigoDivDireita {
+        display: block;
+        width: auto;
+        margin: 1em 0;
+    }
+
+    .sectionContainerArtigoDivDireita h1,
+    .sectionContainerArtigoDivDireita p,
+    .sectionContainerArtigoDivDireita a {
+        margin: 0.5em 0;
+    }
+
+    .sectionContainerArtigo02Locais {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divContainerArtigo02Locais {
+        margin: 0.5em 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .rodape {
+        text-align: center;
+        padding: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .headerContainer h1 {
+        font-size: 20px;
+    }
+
+    .sectionContainerTitulo h1 {
+        font-size: 24px;
+    }
+
+    .sectionContainerTitulo p {
+        font-size: 14px;
+    }
+
+    .sectionContainerArtigoDivDireita h1 {
+        font-size: 18px;
+    }
+
+    .sectionContainerArtigoDivDireita p {
+        font-size: 14px;
+    }
+
+    .sectionContainerArtigoDivDireita a {
+        font-size: 14px;
+    }
+
+    .imagem01, 
+    .imagem02, 
+    .imagem04, 
+    .imagem05, 
+    .imagem07 {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagem03, 
+    .imagem06 {
+        width: 100%;
+        height: auto;
+    }
+
+    .divImagens03 {
+        flex-direction: column;
+    }
+}
+
+.menuLateral {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Aqui consigo deixar o menu escondido, pode ser necessário mudar estes códigos em caso de bug */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding: 2em;
+}
+
+.menuLateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menuLateral ul li {
+    margin: 1em 0;
+}
+
+.menuLateral ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menuLateral .fecharMenu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+}
+
+.sobreposição {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.menuLateral.active {
+    left: 0;
+}
+
+.sobreposição.active {
+    opacity: 1;
+    visibility: visible;
+}
