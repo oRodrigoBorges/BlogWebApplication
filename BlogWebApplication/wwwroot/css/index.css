@@ -116,6 +116,13 @@ header h1 {
     margin: 1em;
 }
 
+.imagem08 {
+    width: 700px;
+    height: 560px;
+    border: solid 2px gray;
+    border-radius: 2px;
+}
+
 .divImagens03 {
     display: flex;
     justify-content: space-evenly;
