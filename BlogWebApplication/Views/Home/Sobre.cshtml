@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@* <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Conheça mais sobre o casal por trás do Oito ou Oitenta, um site dedicado a compartilhar experiências de viagem, tecnologia e gastronomia.">
     <title>Sobre Nós - Oito ou Oitenta</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/reset.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-uti.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -43,19 +47,10 @@
     <!-- Content Section -->
     <div class="container my-5">
         <div class="row">
-            <div class="col-md-6">
-                <h2>Nossa História</h2>
+            <div class="col-md-12">
+                <h2>Nossa História</h2><br />
                 <p>Somos um casal que decidiu compartilhar as aventuras e descobertas ao redor do mundo e pelo nosso próprio país. Combinando a paixão por tecnologia e nosso trabalho na área de TI, buscamos sempre explorar novos destinos, experimentar pratos locais e nos perder por cenários incríveis.</p>
                 <p>O site "Oito ou Oitenta" nasceu para reunir todas essas experiências. Aqui, você encontrará desde dicas de viagem até insights sobre a gastronomia local, além de temas sobre tecnologia que influenciam nosso estilo de vida digital.</p>
-            </div>
-            <div class="col-md-6">
-                <h2>O que você encontrará no Oito ou Oitenta</h2>
-                <ul>
-                    <li>Artigos sobre destinos turísticos no Brasil e no mundo.</li>
-                    <li>Dicas de tecnologia para quem vive na estrada.</li>
-                    <li>Recomendações de restaurantes e pratos imperdíveis.</li>
-                    <li>Playlists e sugestões musicais para embalar suas viagens.</li>
-                </ul>
             </div>
         </div>
     </div>
@@ -66,5 +61,52 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+ *@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-uti.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Sobre Nós</h1>
+        <p class="lead text-center">Descubra o que nos motiva a compartilhar experiências de viagem!</p>
+
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Quem Somos</h2>
+                <p>Somos um grupo apaixonado por viagens, dedicado a explorar novos destinos e compartilhar experiências únicas. Nossa missão é inspirar outros a descobrir o mundo ao seu redor e criar memórias inesquecíveis.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Nossa Missão</h2>
+                <p>Acreditamos que viajar enriquece a vida. Por isso, nos esforçamos para fornecer informações úteis, dicas práticas e relatos autênticos que ajudem nossos leitores a planejar suas aventuras.</p>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h2>Nossos Valores</h2>
+            <ul>
+                <li>Autenticidade: Compartilhamos experiências reais e honestas.</li>
+                <li>Inspiração: Queremos motivar você a explorar novos horizontes.</li>
+                <li>Comunidade: Valorizamos a interação com nossos leitores e buscamos construir uma comunidade de viajantes.</li>
+            </ul>
+        </div>
+
+        <div class="mt-5">
+            <h2>Entre em Contato</h2>
+            <p>Tem alguma dúvida ou sugestão? Não hesite em nos enviar uma mensagem pela nossa página de contato!</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
