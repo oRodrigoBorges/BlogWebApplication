@@ -2,7 +2,7 @@
 
 namespace BlogWebApplication.Controllers
 {
-    public class Destinos : Controller
+    public class DestinosController : Controller
     {
         public IActionResult Index()
         {
