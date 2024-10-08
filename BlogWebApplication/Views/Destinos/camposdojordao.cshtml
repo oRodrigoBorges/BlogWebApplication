@@ -94,6 +94,39 @@
     <section class="sectionContainerArtigo03Rodape">
         <p>Pensando em visitar Campos do Jordão? Planeje sua viagem durante o inverno para aproveitar o melhor da estação. E não se esqueça de experimentar o fondue e os chocolates locais!</p>
     </section>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Mapa com Leaflet</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <style>
+            #map {
+                height: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="map"></div>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+            // Definindo o mapa e centrando em Campos do Jordão
+            var map = L.map('map').setView([-22.7404, -45.5923], 13);
+
+            // Camada de mapa do OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+
+            // Adicionando um marcador em Campos do Jordão
+            L.marker([-22.7404, -45.5923]).addTo(map)
+                .bindPopup('Campos do Jordão')
+                .openPopup();
+        </script>
+    </body>
+</html>
+
     <footer class="rodape">
         <p>Copyright &copy; 2024 - by GRUPO 005</p>
         <p>
