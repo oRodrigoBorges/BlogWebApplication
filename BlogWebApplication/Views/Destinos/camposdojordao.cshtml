@@ -127,6 +127,47 @@
     </body>
 </html>
 
+
+
+<!-- Adicione esta seção ao final do arquivo CamposDoJordao.cshtml -->
+<section class="sectionContainerArtigoComentarios">
+    <h2>Deixe seu comentário</h2>
+    <form method="post" action="@Url.Action("AdicionarComentario", "Destinos")">
+        <div class="mb-3">
+            <label for="NomeUsuario" class="form-label">Seu nome:</label>
+            <input type="text" class="form-control" id="NomeUsuario" name="NomeUsuario" required>
+        </div>
+        <div class="mb-3">
+            <label for="TextoComentario" class="form-label">Seu comentário:</label>
+            <textarea class="form-control" id="TextoComentario" name="TextoComentario" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar Comentário</button>
+    </form>
+
+        @if (ViewBag.HasComentarios)
+        {
+        <h2>Comentários:</h2>
+        <div id="comentarios">
+                @foreach (var comentario in ViewBag.Comentarios)
+                {
+                <div class="comentario">
+                    <h5>@comentario.NomeUsuario</h5>
+                    <p>@comentario.TextoComentario</p>
+                    <hr />
+                </div>
+                }
+        </div>
+        }
+        else
+        {
+        <p>Nenhum comentário ainda. Seja o primeiro a comentar!</p>
+        }
+</section>
+
+
+
+
+
     <footer class="rodape">
         <p>Copyright &copy; 2024 - by GRUPO 005</p>
         <p>

@@ -5,7 +5,7 @@
 namespace BlogWebApplication.Migrations
 {
     /// <inheritdoc />
-    public partial class AppDbMigration : Migration
+    public partial class AdicionarComentarios : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

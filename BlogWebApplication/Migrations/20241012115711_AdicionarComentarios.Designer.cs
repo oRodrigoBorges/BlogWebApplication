@@ -10,9 +10,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BlogWebApplication.Migrations
 {
-    [DbContext(typeof(AppDbContext))]
-    [Migration("20240929144220_AppDbMigration")]
-    partial class AppDbMigration
+    [DbContext(typeof(BlogAppDbContext))]
+    [Migration("20241012115711_AdicionarComentarios")]
+    partial class AdicionarComentarios
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
