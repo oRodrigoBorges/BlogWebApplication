@@ -115,6 +115,28 @@
                 .bindPopup('Campos do Jordão')
                 .openPopup();
         </script>
+
+
+    @* Abaixo os códigos para exibirt previsão do tempo*@
+    <section class="sectionPrevisaoTempo">
+        <h2>Condições do Tempo em Campos do Jordão</h2>
+
+        @if (ViewBag.WeatherData != null)
+        {
+            <p>Temperatura Atual: @ViewBag.WeatherData.main.temp°C</p>
+            <p>Condições: @ViewBag.WeatherData.weather[0].description</p>
+            <p>Umidade: @ViewBag.WeatherData.main.humidity%</p>
+            <p>Vento: @ViewBag.WeatherData.wind.speed km/h</p>
+        }
+        else
+        {
+            <p>Não foi possível obter a previsão do tempo.</p>
+        }
+    </section>
+
+
+
+        @* Abaixo os códigos para exibir comentários*@
     <section class="sectionDeixeSeuComentario">
         <h2>Deixe seu comentário</h2>
         <form method="post" action="@Url.Action("AdicionarComentario", "Destinos")">
