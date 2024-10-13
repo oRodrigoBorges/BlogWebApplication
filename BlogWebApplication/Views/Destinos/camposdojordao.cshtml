@@ -10,13 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/reset.css">
     <link rel="stylesheet" href="~/css/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-grid.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-reboot.css">
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-uti.css">
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">Blog Oito ou Oitenta</a>
@@ -94,21 +94,12 @@
     <section class="sectionContainerArtigo03Rodape">
         <p>Pensando em visitar Campos do Jordão? Planeje sua viagem durante o inverno para aproveitar o melhor da estação. E não se esqueça de experimentar o fondue e os chocolates locais!</p>
     </section>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Mapa com Leaflet</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <div id="map"></div>
         <style>
             #map {
                 height: 400px;
             }
         </style>
-    </head>
-    <body>
-        <div id="map"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
             // Definindo o mapa e centrando em Campos do Jordão
@@ -124,51 +115,43 @@
                 .bindPopup('Campos do Jordão')
                 .openPopup();
         </script>
-    </body>
-</html>
+    <section class="sectionDeixeSeuComentario">
+        <h2>Deixe seu comentário</h2>
+        <form method="post" action="@Url.Action("AdicionarComentario", "Destinos")">
+            <div class="mb-3">
+                <label for="NomeUsuario" class="form-label">Seu nome:</label>
+                <input type="text" class="form-control" id="NomeUsuario" name="NomeUsuario" required>
+            </div>
+            <div class="mb-3">
+                <label for="TextoComentario" class="form-label">Seu comentário:</label>
+                <textarea class="form-control" id="TextoComentario" name="TextoComentario" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Comentário</button>
+        </form>
 
-<section class="sectionContainerArtigoComentarios">
-    <h2>Deixe seu comentário</h2>
-    <form method="post" action="@Url.Action("AdicionarComentario", "Destinos")">
-        <div class="mb-3">
-            <label for="NomeUsuario" class="form-label">Seu nome:</label>
-            <input type="text" class="form-control" id="NomeUsuario" name="NomeUsuario" required>
-        </div>
-        <div class="mb-3">
-            <label for="TextoComentario" class="form-label">Seu comentário:</label>
-            <textarea class="form-control" id="TextoComentario" name="TextoComentario" rows="3" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Enviar Comentário</button>
-    </form>
-
-        @if (ViewBag.HasComentarios)
-        {
-        <h2>Comentários:</h2>
-        <div id="comentarios">
-                @foreach (var comentario in ViewBag.Comentarios)
-                {
-                <div class="comentario">
-                    <h5>@comentario.NomeUsuario</h5>
-                    <p>@comentario.TextoComentario</p>
-                    <hr />
-                </div>
-                }
-        </div>
-        }
-        else
-        {
-        <p>Nenhum comentário ainda. Seja o primeiro a comentar!</p>
-        }
-</section>
-
-
-
-
-
+            @if (ViewBag.HasComentarios)
+            {
+            <h2>Comentários:</h2>
+            <div id="comentarios">
+                    @foreach (var comentario in ViewBag.Comentarios)
+                    {
+                    <div class="comentario">
+                        <h5>@comentario.NomeUsuario</h5>
+                        <p>@comentario.TextoComentario</p>
+                        <hr />
+                    </div>
+                    }
+            </div>
+            }
+            else
+            {
+            <p>Nenhum comentário ainda. Seja o primeiro a comentar!</p>
+            }
+    </section>
     <footer class="rodape">
         <p>Copyright &copy; 2024 - by GRUPO 005</p>
         <p>
-            Anderson Santana - Ieda Gonçalves de Araújo - Josiane Espin Graciano Cavalcanti - Palomma Nobre Silva - Rafael Morais Bomfim - Roberval Marques Aceti - Rodrigo Cavalcanti Borges - Rodrigo Ferreira Zanoti
+            Anderson Santana - Ieda Gonçalves de Araújo - Josiane Espin Graciano Cavalcanti - Palomma Nobre Silva - Rafael Morais Bomfim - Roberval Marques Aceti - Rodrigo Cavalcanti Borges
         </p>
     </footer>
     <script src="~/js/site.js"></script>
