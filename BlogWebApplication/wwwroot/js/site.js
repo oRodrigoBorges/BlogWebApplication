@@ -23,3 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
         sobreposição.classList.remove('active');
     });
 });
+
+let fontSize = 16;
+
+function modificaTamanhoDaFonte(valorAlteracao) {
+    fontSize += valorAlteracao;
+    document.body.style.fontSize = fontSize + 'px';
+}
+
+function resetaTamanhoDaFonte() {
+    fontSize = 16;
+    document.body.style.fontSize = fontSize + 'px';
+}

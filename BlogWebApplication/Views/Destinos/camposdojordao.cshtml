@@ -17,6 +17,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap-uti.css">
 </head>
 <body>
+    <div class="divBtnAcessibilidade">
+        <button onclick="modificaTamanhoDaFonte(1)">Aa+</button>
+        <button onclick="modificaTamanhoDaFonte(-1)">Aa-</button>
+        <button onclick="resetaTamanhoDaFonte()">Resetar</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">Blog Oito ou Oitenta</a>
@@ -94,29 +99,27 @@
     <section class="sectionContainerArtigo03Rodape">
         <p>Pensando em visitar Campos do Jordão? Planeje sua viagem durante o inverno para aproveitar o melhor da estação. E não se esqueça de experimentar o fondue e os chocolates locais!</p>
     </section>
-        <div id="map"></div>
-        <style>
-            #map {
-                height: 400px;
-            }
-        </style>
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-        <script>
-            // Definindo o mapa e centrando em Campos do Jordão
-            var map = L.map('map').setView([-22.7404, -45.5923], 13);
+    <div id="map"></div>
+    <style>
+        #map {
+            height: 400px;
+        }
+    </style>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Definindo o mapa e centrando em Campos do Jordão
+        var map = L.map('map').setView([-22.7404, -45.5923], 13);
 
-            // Camada de mapa do OpenStreetMap
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-            }).addTo(map);
+        // Camada de mapa do OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
 
-            // Adicionando um marcador em Campos do Jordão
-            L.marker([-22.7404, -45.5923]).addTo(map)
-                .bindPopup('Campos do Jordão')
-                .openPopup();
-        </script>
-
-
+        // Adicionando um marcador em Campos do Jordão
+        L.marker([-22.7404, -45.5923]).addTo(map)
+            .bindPopup('Campos do Jordão')
+            .openPopup();
+    </script>
     @* Abaixo os códigos para exibirt previsão do tempo*@
     <section class="sectionPrevisaoTempo">
         <h2>Condições do Tempo em Campos do Jordão</h2>
@@ -136,7 +139,7 @@
 
 
 
-        @* Abaixo os códigos para exibir comentários*@
+    @* Abaixo os códigos para exibir comentários*@
     <section class="sectionDeixeSeuComentario">
         <h2>Deixe seu comentário</h2>
         <form method="post" action="@Url.Action("AdicionarComentario", "Destinos")">
@@ -151,24 +154,24 @@
             <button type="submit" class="btn btn-primary">Enviar Comentário</button>
         </form>
 
-            @if (ViewBag.HasComentarios)
-            {
+        @if (ViewBag.HasComentarios)
+        {
             <h2>Comentários:</h2>
             <div id="comentarios">
-                    @foreach (var comentario in ViewBag.Comentarios)
-                    {
+                @foreach (var comentario in ViewBag.Comentarios)
+                {
                     <div class="comentario">
                         <h5>@comentario.NomeUsuario</h5>
                         <p>@comentario.TextoComentario</p>
                         <hr />
                     </div>
-                    }
+                }
             </div>
-            }
-            else
-            {
+        }
+        else
+        {
             <p>Nenhum comentário ainda. Seja o primeiro a comentar!</p>
-            }
+        }
     </section>
     <footer class="rodape">
         <p>Copyright &copy; 2024 - by GRUPO 005</p>
