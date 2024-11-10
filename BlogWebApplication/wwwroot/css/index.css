@@ -405,7 +405,10 @@ header h1 {
 }
 
 
-
+.sectionDeixeSeuComentario {
+    width: 30em;
+    place-self: center;
+}
 
 
 
