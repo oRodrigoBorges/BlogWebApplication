@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>disable</Nullable> <!--Quando "enable", será exigido que toda elemento tipo referencia seja definico como Nullable-->
-    <ImplicitUsings>enable</ImplicitUsings> <!--Quando "enable", os "using" definidos serão aplicados globalmente a todos os arquivos-->
+    <Nullable>disable</Nullable> 
+    <ImplicitUsings>enable</ImplicitUsings> 
   </PropertyGroup>
 	
 	<!--Abaixo serão exibidos todos os Nugets instalados no projeto-->
